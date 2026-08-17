@@ -10,13 +10,12 @@ export default function Hero() {
           <p className="eyebrow">Intercultural learning for global organizations</p>
 
           <h1 className="hero__title" id="hero-title">
-            Global collaboration becomes stronger when people feel <em>understood</em>.
+             Global teams work better when people feel <em>understood</em>
           </h1>
 
           <p className="lead hero__lead">
-            Huitzilli helps multicultural teams, relocating professionals and global organizations
-            turn cultural differences into trust, belonging and more effective collaboration —
-            through intercultural learning designed for their specific context.
+            Huitzilli helps multicultural teams and relocating professionals turn 
+            cultural differences into trust, belonging and stronger collaboration.
           </p>
 
           <div className="hero__cta">
@@ -43,12 +42,6 @@ export default function Hero() {
           </svg>
 
           <img className="hero__photo" src={heroCollage} alt="Four people in separate portraits greeting each other across cultures — hi, hello, bonjour, salut." width="900" height="818" />
-
-          <Reveal as="div" className="hero__accent" aria-hidden="true">
-            <div className="imgph">
-              <p className="imgph__note">[Image placeholder: close-up of hands working with cultural mapping cards, or a textile / craft detail — warm, tactile, specific to place.]</p>
-            </div>
-          </Reveal>
         </Reveal>
 
       </div>

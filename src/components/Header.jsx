@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import logoDark from '../assets/logo-dark.png'
 
 export default function Header() {
@@ -18,17 +19,18 @@ export default function Header() {
     <header className={`header${isStuck ? ' is-stuck' : ''}${isOpen ? ' is-open' : ''}`} id="header">
       <div className="wrap header__inner">
 
-        <a className="brand" href="#" aria-label="Huitzilli Cultural Expression, home">
+        <Link className="brand" to="/" aria-label="Huitzilli Cultural Expression, home" onClick={closeNav}>
           <img className="brand__logo" src={logoDark} alt="Huitzilli Cultural Expression" height="30" width="70" />
-        </a>
+        </Link>
 
         <nav className="nav" id="nav" aria-label="Main">
           <ul className="nav__list">
-            <li><a className="nav__link" href="#how-we-help" onClick={closeNav}>How We Help</a></li>
-            <li><a className="nav__link" href="#approach" onClick={closeNav}>Our Approach</a></li>
-            <li><a className="nav__link" href="#insights" onClick={closeNav}>Insights</a></li>
-            <li><a className="nav__link" href="#readiness" onClick={closeNav}>Readiness Check</a></li>
-            <li><a className="nav__link" href="#about" onClick={closeNav}>About</a></li>
+            <li><Link className="nav__link" to="/#how-we-help" onClick={closeNav}>How We Help</Link></li>
+            <li><Link className="nav__link" to="/#approach" onClick={closeNav}>Our Approach</Link></li>
+            <li><Link className="nav__link" to="/#insights" onClick={closeNav}>Insights</Link></li>
+            <li><Link className="nav__link" to="/#readiness" onClick={closeNav}>Readiness Check</Link></li>
+            <li><Link className="nav__link" to="/#about" onClick={closeNav}>About</Link></li>
+            <li><Link className="nav__link" to="/about-us" onClick={closeNav}>About Us</Link></li>
           </ul>
 
           <div className="lang" role="group" aria-label="Language">
@@ -37,7 +39,7 @@ export default function Header() {
             <a href="#" lang="pt">PT</a>
           </div>
 
-          <a className="btn btn--primary btn--sm" href="#book" onClick={closeNav}>Start a Conversation</a>
+          <Link className="btn btn--primary btn--sm" to="/#book" onClick={closeNav}>Start a Conversation</Link>
         </nav>
 
         <button

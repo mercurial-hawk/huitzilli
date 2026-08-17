@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import logoWhite from '../assets/logo-white.png'
 
 export default function Footer() {
@@ -7,9 +8,9 @@ export default function Footer() {
         <div className="footer__grid">
 
           <div>
-            <a className="brand" href="#">
+            <Link className="brand" to="/">
               <img className="brand__logo brand__logo--lg" src={logoWhite} alt="Huitzilli Cultural Expression" height="36" width="83" />
-            </a>
+            </Link>
             <p className="footer__tag">
               <em>Huitzilli</em> means hummingbird in Nahuatl — movement between worlds, and the
               patience to stay still long enough to understand one.
@@ -19,21 +20,22 @@ export default function Footer() {
           <div>
             <h4>How we help</h4>
             <ul>
-              <li><a href="#how-we-help">Multicultural Team Integration</a></li>
-              <li><a href="#how-we-help">Global Mobility &amp; Acculturation</a></li>
-              <li><a href="#how-we-help">Culturally Aware Leadership</a></li>
-              <li><a href="#how-we-help">Language &amp; Cultural Fluency</a></li>
-              <li><a href="#how-we-help">Research &amp; Consulting</a></li>
+              <li><Link to="/#how-we-help">Multicultural Team Integration</Link></li>
+              <li><Link to="/#how-we-help">Global Mobility &amp; Acculturation</Link></li>
+              <li><Link to="/#how-we-help">Culturally Aware Leadership</Link></li>
+              <li><Link to="/#how-we-help">Language &amp; Cultural Fluency</Link></li>
+              <li><Link to="/#how-we-help">Research &amp; Consulting</Link></li>
             </ul>
           </div>
 
           <div>
             <h4>Company</h4>
             <ul>
-              <li><a href="#approach">Our Approach</a></li>
-              <li><a href="#about">About Alejandra</a></li>
-              <li><a href="#insights">Insights</a></li>
-              <li><a href="#book">Book a Consultation</a></li>
+              <li><Link to="/about-us">About Us</Link></li>
+              <li><Link to="/#approach">Our Approach</Link></li>
+              <li><Link to="/#about">About Alejandra</Link></li>
+              <li><Link to="/#insights">Insights</Link></li>
+              <li><Link to="/#book">Book a Consultation</Link></li>
             </ul>
           </div>
 
