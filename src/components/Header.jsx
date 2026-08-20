@@ -25,12 +25,12 @@ export default function Header() {
 
         <nav className="nav" id="nav" aria-label="Main">
           <ul className="nav__list">
-            <li><Link className="nav__link" to="/#how-we-help" onClick={closeNav}>How We Help</Link></li>
-            <li><Link className="nav__link" to="/#approach" onClick={closeNav}>Our Approach</Link></li>
-            <li><Link className="nav__link" to="/#insights" onClick={closeNav}>Insights</Link></li>
-            <li><Link className="nav__link" to="/#readiness" onClick={closeNav}>Readiness Check</Link></li>
-            <li><Link className="nav__link" to="/#about" onClick={closeNav}>About</Link></li>
+            <li><Link className="nav__link" to="/" onClick={closeNav}>Home</Link></li>
             <li><Link className="nav__link" to="/about-us" onClick={closeNav}>About Us</Link></li>
+            <li><Link className="nav__link" to="/our-services" onClick={closeNav}>What We Do</Link></li>
+            <li><Link className="nav__link" to="/cultural-compass" onClick={closeNav}>Cultural Compass</Link></li>
+            <li><Link className="nav__link" to="/cultural-apapacho" onClick={closeNav}>Cultural Apapacho</Link></li>
+            <li><Link className="nav__link" to="/our-ceo" onClick={closeNav}>Our CEO</Link></li>
           </ul>
 
           <div className="lang" role="group" aria-label="Language">

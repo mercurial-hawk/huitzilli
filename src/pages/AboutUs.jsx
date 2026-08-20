@@ -26,13 +26,14 @@ const VALUES = [
     body: `The name "Huitzilli," meaning "hummingbird" in Nahuatl, profoundly reflects our
       values and mission. In Mexican indigenous cultures, the hummingbird is more than a bird;
       it is a sacred messenger and a symbol of resilience and connection. For the Aztecs, it was
-      linked to Huitzilopochtli, representing the quest for destiny and the ceaseless movement of
-      the human heart toward its purpose. This symbolism aligns with our belief that
-      understanding and embracing cultural roots is essential for personal and collective growth.
-      Similarly, the Maya viewed the hummingbird as a vital link between worlds, emphasizing its
-      role in communication and connection. At Huitzilli Cultural Expression, we draw inspiration
-      from these meanings to enrich our programs, bridging diverse perspectives and fostering
-      cultural awareness, much like the hummingbird connects different realms.`,
+      linked to Huitzilopochtli, the god of war, representing the quest for destiny and the
+      ceaseless movement of the human heart toward its purpose. This symbolism aligns with our
+      belief that understanding and embracing cultural roots is essential for personal and
+      collective growth. Similarly, the Maya viewed the hummingbird as a vital link between
+      worlds, emphasizing its role in communication and connection. At Huitzilli Cultural
+      Expression, we draw inspiration from these meanings to enrich our programs, bridging
+      diverse perspectives and fostering cultural awareness, much like the hummingbird connects
+      different realms.`,
   },
 ]
 
@@ -43,19 +44,14 @@ export default function AboutUs() {
 
   return (
     <>
+      {/* Hero — 50/50 split, matching the original layout exactly */}
       <section className="section" style={{ paddingBottom: 'clamp(2.5rem,4vw,4rem)' }} aria-labelledby="aboutus-title">
-        <div className="wrap hero__grid" style={{ alignItems: 'center' }}>
-
+        <div className="wrap aboutus-hero">
           <Reveal className="hero__copy">
             <p className="eyebrow">Who we are</p>
-            <h1 className="hero__title" id="aboutus-title">
-              Cultural immersion rooted in <em>creativity</em>.
+            <h1 className="hero__title" id="aboutus-title" style={{ maxWidth: 'none', fontSize: 'clamp(2rem, 1.1rem + 2.6vw, 3.2rem)', lineHeight: 1.3 }}>
+              Cultural immersion<br />rooted in <em>creativity</em>.
             </h1>
-            <p className="lead hero__lead">
-              Huitzilli blends language education, cross-cultural training and Peace Education
-              into a single, human approach to understanding — designed for companies,
-              expatriates, diplomats and families navigating diverse cultural landscapes.
-            </p>
           </Reveal>
 
           <Reveal className="hero__media">
@@ -66,18 +62,24 @@ export default function AboutUs() {
               width="640"
               height="426"
               loading="lazy"
-              style={{ width: '128%', maxWidth: 'none' }}
+              style={{ width: '750px', height: 'auto', maxWidth: 'none' }}
+
             />
           </Reveal>
-
         </div>
       </section>
 
+      {/* Mission / Vision / Values — 30/70 columns, divider line above each */}
       <section className="section">
         <div className="wrap">
           <div className="help__list" style={{ borderTopColor: 'rgba(26,26,26,.16)' }}>
             {VALUES.map((v) => (
-              <Reveal as="article" className="help__row" key={v.title} style={{ gridTemplateColumns: '.6fr 1.4fr' }}>
+              <Reveal
+                as="article"
+                className="help__row"
+                key={v.title}
+                style={{ gridTemplateColumns: '.3fr .7fr' }}
+              >
                 <h2 className="help__name" style={{ fontSize: 'var(--t-h3)' }}>{v.title}</h2>
                 <p className="help__v" style={{ maxWidth: '68ch' }}>{v.body}</p>
               </Reveal>

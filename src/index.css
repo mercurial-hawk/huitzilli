@@ -523,3 +523,71 @@ details p{padding-bottom:1.5rem;color:var(--muted);font-size:.97rem;max-width:62
 
 .imgph img{width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:0}
 .imgph__note{position:relative;z-index:1}
+
+.aboutus-hero{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2.5rem,5vw,5rem);align-items:start}
+
+/* ============================================================
+   OUR SERVICES page
+   ============================================================ */
+.banner-img{
+  width:100%;height:clamp(180px,28vw,340px);object-fit:cover;
+  border-radius:4px;margin-block:clamp(1rem,3vw,2rem);
+}
+
+.icon-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(1.5rem,3vw,2.5rem)}
+.icon-grid__item img{width:64px;height:64px;object-fit:contain;margin-bottom:1.1rem}
+.icon-grid__item h3{font-size:1.05rem;margin-bottom:.5rem}
+.icon-grid__item p{color:var(--muted);font-size:.92rem;line-height:1.55}
+@media (max-width:860px){.icon-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.icon-grid{grid-template-columns:1fr}}
+
+.highlight-box{
+  background:var(--sand);border-radius:4px;padding:clamp(1.6rem,3vw,2.4rem);
+  max-width:78ch;
+}
+.highlight-box h3{font-size:1.2rem;margin-bottom:.9rem;font-family:var(--display);font-weight:400}
+.highlight-box p{color:var(--muted);line-height:1.65}
+
+/* ============================================================
+   CULTURAL COMPASS page
+   ============================================================ */
+.impact-title{text-align:center;max-width:46ch;margin-inline:auto}
+
+.impact-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(1.5rem,3vw,2rem)}
+.impact-grid__item img{width:88px;height:88px;object-fit:contain;margin-bottom:1.2rem}
+.impact-grid__item h3{font-size:1rem;margin-bottom:.6rem}
+.impact-grid__item p{color:var(--muted);font-size:.92rem;line-height:1.55}
+.impact-grid__item ul{margin:0;padding-left:1.1rem;color:var(--muted);font-size:.92rem;line-height:1.55;display:grid;gap:.4rem}
+.impact-grid__item li::marker{color:var(--gorget)}
+@media (max-width:1040px){.impact-grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:640px){.impact-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:420px){.impact-grid{grid-template-columns:1fr}}
+
+.workshops__list{border-top:1px solid rgba(26,26,26,.16)}
+.workshops__nested{padding:.4rem 0 .6rem 1.4rem}
+.workshops__nested details{border-bottom:1px solid rgba(26,26,26,.1)}
+.workshops__nested summary{font-size:.95rem}
+
+.workshop-detail{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.2rem,3vw,2rem);align-items:center;padding-bottom:1.6rem}
+.workshop-detail img{width:100%;height:220px;object-fit:cover;border-radius:4px}
+.workshop-detail p{color:var(--muted);font-size:.95rem;line-height:1.6}
+@media (max-width:760px){.workshop-detail{grid-template-columns:1fr}.workshop-detail img{height:200px}}
+
+/* ============================================================
+   OUR CEO page
+   ============================================================ */
+.ceo-hero{display:grid;grid-template-columns:minmax(240px,380px) 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:start}
+.ceo-hero__photo{width:100%;aspect-ratio:594/577;object-fit:cover;border-radius:4px}
+@media (max-width:860px){.ceo-hero{grid-template-columns:1fr}}
+
+.ceo-social{
+  display:flex;align-items:center;gap:1.2rem;
+  padding-top:1.8rem;margin-top:2.2rem;border-top:1px solid rgba(26,26,26,.14);
+}
+.ceo-social__icon{
+  width:46px;height:46px;border-radius:50%;border:1px solid var(--ink);
+  display:flex;align-items:center;justify-content:center;flex:none;
+}
+.ceo-social__icon svg{width:18px;height:18px;fill:var(--ink)}
+.ceo-social a{color:var(--teal-deep);font-weight:600;text-decoration:underline}
+.ceo-social p{margin-top:.3rem;color:var(--muted);font-size:.92rem}
