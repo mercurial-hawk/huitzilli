@@ -39,7 +39,7 @@ export default function Header() {
             <a href="#" lang="pt">PT</a>
           </div>
 
-          <Link className="btn btn--primary btn--sm" to="/#book" onClick={closeNav}>Start a Conversation</Link>
+          <Link className="btn btn--primary btn--sm" to="/#contact" onClick={closeNav}>Start a Conversation</Link>
         </nav>
 
         <button

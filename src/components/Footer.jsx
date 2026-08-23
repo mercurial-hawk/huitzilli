@@ -34,8 +34,7 @@ export default function Footer() {
               <li><Link to="/about-us">About Us</Link></li>
               <li><Link to="/#approach">Our Approach</Link></li>
               <li><Link to="/#about">About Alejandra</Link></li>
-              <li><Link to="/#insights">Insights</Link></li>
-              <li><Link to="/#book">Book a Consultation</Link></li>
+              <li><Link to="/#contact">Book a Consultation</Link></li>
             </ul>
           </div>
 

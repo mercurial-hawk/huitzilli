@@ -3,17 +3,15 @@ import { useLocation } from 'react-router-dom'
 import Hero from '../components/Hero.jsx'
 import CredibilityStrip from '../components/CredibilityStrip.jsx'
 import InvisibleChallenges from '../components/InvisibleChallenges.jsx'
-import QuietWithdrawal from '../components/QuietWithdrawal.jsx'
+import ServicesOverview from '../components/ServicesOverview.jsx'
 import HowWeHelp from '../components/HowWeHelp.jsx'
 import Approach from '../components/Approach.jsx'
-import WorkshopExperience from '../components/WorkshopExperience.jsx'
 import Outcomes from '../components/Outcomes.jsx'
-import Proof from '../components/Proof.jsx'
+import Testimonials from '../components/Testimonials.jsx'
 import Alejandra from '../components/Alejandra.jsx'
-import InsightsAndMagnet from '../components/InsightsAndMagnet.jsx'
 import ReadinessCheck from '../components/ReadinessCheck.jsx'
 import FAQ from '../components/FAQ.jsx'
-import FinalCTA from '../components/FinalCTA.jsx'
+import Contact from '../components/Contact.jsx'
 
 export default function Home() {
   const location = useLocation()
@@ -32,17 +30,15 @@ export default function Home() {
       <Hero />
       <CredibilityStrip />
       <InvisibleChallenges />
-      <QuietWithdrawal />
+      <ServicesOverview />
       <HowWeHelp />
       <Approach />
-      <WorkshopExperience />
       <Outcomes />
-      <Proof />
+      <Testimonials />
       <Alejandra />
-      <InsightsAndMagnet />
       <ReadinessCheck />
       <FAQ />
-      <FinalCTA />
+      <Contact />
     </>
   )
 }

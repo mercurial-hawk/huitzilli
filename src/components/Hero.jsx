@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Reveal from '../hooks/Reveal.jsx'
 import heroCollage from '../assets/hero-collage.webp'
 
@@ -19,8 +20,8 @@ export default function Hero() {
           </p>
 
           <div className="hero__cta">
-            <a className="btn btn--primary" href="#book">Start a Conversation <span className="arrow" aria-hidden="true">→</span></a>
-            <a className="btn btn--ghost" href="#workshop">Explore a Custom Workshop</a>
+            <a className="btn btn--primary" href="#contact">Start a Conversation <span className="arrow" aria-hidden="true">→</span></a>
+            <Link className="btn btn--ghost" to="/cultural-compass">Explore a Custom Workshop</Link>
           </div>
 
           <p className="hero__trust">
