@@ -17,8 +17,8 @@ export default function OurCeo() {
         </div>
       </section>
 
-      {/* Photo + intro */}
-      <section className="section" style={{ paddingTop: 0, paddingBottom: '2rem' }}>
+      {/* Photo + full bio */}
+      <section className="section" style={{ paddingTop: 0 }}>
         <div className="wrap ceo-hero">
           <Reveal>
             <img className="ceo-hero__photo" src={photoAlejandra} alt="Alejandra Coronel Mengelle, CEO and Founder of Huitzilli Cultural Expression." />
@@ -41,15 +41,7 @@ export default function OurCeo() {
               and expatriates, gaining deep insights into their unique challenges and
               aspirations.
             </p>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* Extended bio */}
-      <section className="section" style={{ paddingTop: 0 }}>
-        <div className="wrap">
-          <Reveal style={{ maxWidth: '86ch' }}>
-            <p>
+            <p style={{ marginTop: '1.4rem' }}>
               In 2017, Alejandra co-founded Idiomizate, leading it as CEO until 2022. Under her
               leadership, the organization taught ten languages and forged influential
               partnerships with international schools in Mexico City, igniting a passion for
@@ -69,20 +61,20 @@ export default function OurCeo() {
               recognition for diverse cultural legacies, ensuring they thrive in our
               interconnected world.
             </p>
-          </Reveal>
 
-          <Reveal className="ceo-social">
-            <div className="ceo-social__icon" aria-hidden="true">
-              <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                <path d="M100.3 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.6 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
-              </svg>
-            </div>
-            <div>
-              <a href="https://www.linkedin.com/in/alejandra-coronel-mengelle/" target="_blank" rel="noreferrer">
-                Connect with me on LinkedIn!
-              </a>
-              <p>Discover how Huitzilli Cultural Expression fosters cultural understanding through language.</p>
-            </div>
+            <Reveal className="ceo-social">
+              <div className="ceo-social__icon" aria-hidden="true">
+                <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M100.3 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.6 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
+                </svg>
+              </div>
+              <div>
+                <a href="https://www.linkedin.com/in/alejandra-coronel-mengelle/" target="_blank" rel="noreferrer">
+                  Connect with me on LinkedIn!
+                </a>
+                <p>Discover how Huitzilli Cultural Expression fosters cultural understanding through language.</p>
+              </div>
+            </Reveal>
           </Reveal>
         </div>
       </section>
