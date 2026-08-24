@@ -1,4 +1,5 @@
 import Reveal from '../hooks/Reveal.jsx'
+import approachPhoto from '../assets/pexels-thirdman-7653771.jpg'
 
 const STAGES = [
   { n: '01', title: 'Make cultural expectations visible', text: 'Name the unspoken assumptions already shaping how the team works.' },
@@ -16,7 +17,7 @@ export default function Approach() {
 
         <Reveal className="approach__media">
           <div className="imgph">
-            <p className="imgph__note">[Photo placeholder: a facilitator listening. Close, quiet, attentive. Or a close-up cultural detail — hands, textile, a shared table.]</p>
+            <img src={approachPhoto} alt="A facilitator listening closely during a session." />
           </div>
         </Reveal>
 
@@ -38,13 +39,6 @@ export default function Approach() {
           <ul className="pillars">
             {PILLARS.map((p) => <li key={p}>{p}</li>)}
           </ul>
-
-          <div className="compass">
-            <h4>The Cultural Compass</h4>
-            <p>Huitzilli's workshop framework, used to orient teams before they begin working
-               across their differences.</p>
-            <span className="ph">Confirm framework name, definition and stages before publishing</span>
-          </div>
         </Reveal>
 
       </div>

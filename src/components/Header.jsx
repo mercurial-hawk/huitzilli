@@ -1,10 +1,25 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import logoDark from '../assets/logo-dark.png'
+import { EN_TO_ES, ES_TO_EN } from '../i18n-routes.js'
+
+const LABELS = {
+  en: {
+    home: 'Home', about: 'About Us', services: 'What We Do',
+    compass: 'Cultural Compass', apapacho: 'Cultural Apapacho', ceo: 'Our CEO',
+  },
+  es: {
+    home: 'Inicio', about: 'Acerca de Nosotros', services: 'Qué Hacemos',
+    compass: 'Brújula Cultural', apapacho: 'Cultural Apapacho', ceo: 'Nuestra CEO',
+  },
+}
 
 export default function Header() {
   const [isStuck, setIsStuck] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
+  const { pathname } = useLocation()
+  const isEs = pathname.startsWith('/es')
+  const t = isEs ? LABELS.es : LABELS.en
 
   useEffect(() => {
     const onScroll = () => setIsStuck(window.scrollY > 8)
@@ -15,31 +30,33 @@ export default function Header() {
 
   const closeNav = () => setIsOpen(false)
 
+  const p = (enPath) => (isEs ? EN_TO_ES[enPath] : enPath)
+  const homeTo = p('/')
+  const enTarget = ES_TO_EN[pathname] || '/'
+  const esTarget = EN_TO_ES[pathname] || '/es'
+
   return (
     <header className={`header${isStuck ? ' is-stuck' : ''}${isOpen ? ' is-open' : ''}`} id="header">
       <div className="wrap header__inner">
 
-        <Link className="brand" to="/" aria-label="Huitzilli Cultural Expression, home" onClick={closeNav}>
+        <Link className="brand" to={homeTo} aria-label="Huitzilli Cultural Expression, home" onClick={closeNav}>
           <img className="brand__logo" src={logoDark} alt="Huitzilli Cultural Expression" height="30" width="70" />
         </Link>
 
         <nav className="nav" id="nav" aria-label="Main">
           <ul className="nav__list">
-            <li><Link className="nav__link" to="/" onClick={closeNav}>Home</Link></li>
-            <li><Link className="nav__link" to="/about-us" onClick={closeNav}>About Us</Link></li>
-            <li><Link className="nav__link" to="/our-services" onClick={closeNav}>What We Do</Link></li>
-            <li><Link className="nav__link" to="/cultural-compass" onClick={closeNav}>Cultural Compass</Link></li>
-            <li><Link className="nav__link" to="/cultural-apapacho" onClick={closeNav}>Cultural Apapacho</Link></li>
-            <li><Link className="nav__link" to="/our-ceo" onClick={closeNav}>Our CEO</Link></li>
+            <li><Link className="nav__link" to={homeTo} onClick={closeNav}>{t.home}</Link></li>
+            <li><Link className="nav__link" to={p('/about-us')} onClick={closeNav}>{t.about}</Link></li>
+            <li><Link className="nav__link" to={p('/our-services')} onClick={closeNav}>{t.services}</Link></li>
+            <li><Link className="nav__link" to={p('/cultural-compass')} onClick={closeNav}>{t.compass}</Link></li>
+            <li><Link className="nav__link" to={p('/cultural-apapacho')} onClick={closeNav}>{t.apapacho}</Link></li>
+            <li><Link className="nav__link" to={p('/our-ceo')} onClick={closeNav}>{t.ceo}</Link></li>
           </ul>
 
           <div className="lang" role="group" aria-label="Language">
-            <a href="#" aria-current="true" lang="en">EN</a><span aria-hidden="true">/</span>
-            <a href="#" lang="es">ES</a><span aria-hidden="true">/</span>
-            <a href="#" lang="pt">PT</a>
+            <Link to={enTarget} aria-current={!isEs ? 'true' : undefined} lang="en" onClick={closeNav}>EN</Link><span aria-hidden="true">/</span>
+            <Link to={esTarget} aria-current={isEs ? 'true' : undefined} lang="es" onClick={closeNav}>ES</Link>
           </div>
-
-          <Link className="btn btn--primary btn--sm" to="/#contact" onClick={closeNav}>Start a Conversation</Link>
         </nav>
 
         <button

@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import Hero from '../components/Hero.jsx'
-import CredibilityStrip from '../components/CredibilityStrip.jsx'
 import InvisibleChallenges from '../components/InvisibleChallenges.jsx'
 import ServicesOverview from '../components/ServicesOverview.jsx'
 import HowWeHelp from '../components/HowWeHelp.jsx'
@@ -28,7 +27,6 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <CredibilityStrip />
       <InvisibleChallenges />
       <ServicesOverview />
       <HowWeHelp />

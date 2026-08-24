@@ -4,6 +4,7 @@ import Reveal from '../hooks/Reveal.jsx'
 import imgLanguage from '../assets/our-services/pexels-mikhail-nilov-7574366-1024x683.jpg'
 import imgCrossCultural from '../assets/our-services/Two-Students-reading-a-book-1024x299.jpg'
 import imgCompass from '../assets/cultural-compass/pexels-fauxels-3184306-scaled.jpg'
+import imgResearch from '../assets/research-and-consulting.jpg'
 
 const SERVICES = [
   {
@@ -27,7 +28,7 @@ const SERVICES = [
   {
     title: 'Research and Consulting',
     text: 'Using rigorous scientific methods, we analyze sociocultural challenges and workplace conflicts, delivering tailored solutions that foster inclusive environments and productive global collaboration.',
-    image: null,
+    image: imgResearch,
     to: '/our-services',
   },
 ]
@@ -50,9 +51,7 @@ export default function ServicesOverview() {
         <div className="services-grid" style={{ marginTop: 'clamp(2.5rem,4vw,3.5rem)' }}>
           {SERVICES.map((s) => (
             <Reveal as="article" className="service-card" key={s.title}>
-              {s.image
-                ? <img src={s.image} alt="" aria-hidden="true" />
-                : <div className="imgph service-card__ph"><p className="imgph__note">[Photo placeholder: research &amp; consulting]</p></div>}
+              <img src={s.image} alt="" aria-hidden="true" />
               <h3>{s.title}</h3>
               <p>{s.text}</p>
               <Link className="link" to={s.to}>Read more →</Link>

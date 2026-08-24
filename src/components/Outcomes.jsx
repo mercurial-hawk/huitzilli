@@ -29,7 +29,7 @@ export default function Outcomes() {
           </p>
         </Reveal>
 
-        <Reveal>
+        <Reveal className="outcomes__list-wrap">
           <ul className="outcomes__list">
             {ITEMS.map((item) => (
               <li key={item}>
@@ -38,10 +38,6 @@ export default function Outcomes() {
               </li>
             ))}
           </ul>
-          <p className="outcomes__note">
-            These are the outcomes participants and organizations report. Huitzilli does not
-            promise financial results, and no program should.
-          </p>
         </Reveal>
 
       </div>
